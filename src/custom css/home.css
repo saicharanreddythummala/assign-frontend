@@ -1,0 +1,40 @@
+/* .home{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+ .container-fluid{
+    height: 100vh;
+    background-color: #f2f7f8;
+}
+
+ .home .card{
+    color: #06060F;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+ .table{
+    margin-bottom: 0;
+}
+
+
+ .table thead th{
+    position: sticky;
+    top: 0;
+    background-color: #79a490;
+}
+ tr{
+    background-color: #cde0da;
+}
+tbody tr{
+    font-size: 0.9em;
+}
+tbody tr th,td{
+    width: 16.66%
+}
+
+.home tbody tr .d-flex{
+    padding: 0;
+}
