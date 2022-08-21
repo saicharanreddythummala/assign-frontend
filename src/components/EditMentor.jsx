@@ -58,7 +58,6 @@ export default function EditStudent() {
               <Col sm={9}>
                 <Input
                   id="firstname"
-                  name="name"
                   placeholder="Enter first name"
                   type="text"
                   onChange={formik.handleChange}
@@ -73,7 +72,6 @@ export default function EditStudent() {
               <Col sm={9}>
                 <Input
                   id="lastname"
-                  name="name"
                   placeholder="Enter last name"
                   type="text"
                   onChange={formik.handleChange}
@@ -88,7 +86,6 @@ export default function EditStudent() {
               <Col sm={9}>
                 <Input
                   id="email"
-                  name="email"
                   placeholder="Enter email"
                   type="email"
                   onChange={formik.handleChange}
