@@ -5,10 +5,11 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import { useNavigate, useParams } from "react-router-dom";
+import { host } from "../util/api";
 
 export default function EditStudent() {
   const params = useParams();
-  const URL = "https://assign-mentor-35.herokuapp.com";
+  
   const navigate = useNavigate()
 
   const [mentor, setMentor] = useState({
@@ -18,7 +19,7 @@ export default function EditStudent() {
   });
 
   const getMentor = async () => {
-    const res = await axios.get(`${URL}/mentors/${params.id}`);
+    const res = await axios.get(`${host}/mentors/${params.id}`);
     setMentor(res.data);
   };
 
@@ -41,7 +42,7 @@ export default function EditStudent() {
   });
 
   const handleSubmit = async (values)=>{
-    await axios.put(`${URL}/mentors/${params.id}`,values);
+    await axios.put(`${host}/mentors/${params.id}`,values);
     navigate("/")
   }
 

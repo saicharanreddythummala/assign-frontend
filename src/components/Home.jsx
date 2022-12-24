@@ -5,9 +5,10 @@ import "../custom css/home.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { host } from "../util/api";
 
 export default function Home() {
-  const URL = "https://assign-mentor-35.herokuapp.com";
+ 
 
   const navigate = useNavigate();
 
@@ -16,27 +17,25 @@ export default function Home() {
 
   //get students
   const studentData = async () => {
-    const res = await axios.get(`${URL}/students`);
+    const res = await axios.get(`${host}/students`);
     setStudents(res.data);
   };
 
   //get mentors
   const mentorData = async () => {
-    const res = await axios.get(`${URL}/mentors`);
+    const res = await axios.get(`${host}/mentors`);
     setMentors(res.data);
   };
 
   //delete a student by their id
   const deleteStudent = async (id) => {
-    const res = await axios.delete(`${URL}/students/${id}`);
-    console.log(res);
+    const res = await axios.delete(`${host}/students/${id}`);
     studentData();
   };
 
   //delete a mentor by their id
   const deleteMentor = async (id) => {
-    const res = await axios.delete(`${URL}/mentors/${id}`);
-    console.log(res);
+    const res = await axios.delete(`${host}/mentors/${id}`);
     mentorData();
   };
 

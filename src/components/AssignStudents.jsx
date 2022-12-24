@@ -4,25 +4,26 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Table } from "reactstrap";
 import "../custom css/assignstudents.css";
+import { host } from "../util/api";
 
 export default function AssignStudents() {
-  const URL = "https://assign-mentor-35.herokuapp.com";
+  
   const params = useParams();
   const [mentor, setMentor] = useState({});
   const [students, setstudents] = useState([]);
 
   const getMentor = async () => {
-    const res = await axios.get(`${URL}/mentors/${params.id}`);
+    const res = await axios.get(`${host}/mentors/${params.id}`);
     setMentor(res.data);
   };
 
   const getStudents = async () => {
-    const res = await axios.get(`${URL}/students/unassigned`);
+    const res = await axios.get(`${host}/students/unassigned`);
     setstudents(res.data);
   };
 
   const handleAssign = async (id, data) => {
-    await axios.put(`${URL}/students/${id}`, data);
+    await axios.put(`${host}/students/${id}`, data);
     getStudents();
   };
 

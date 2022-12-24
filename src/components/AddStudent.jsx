@@ -4,9 +4,10 @@ import "../custom css/addstudent.css";
 import axios from "axios";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
+import { host } from "../util/api";
 
 export default function AddStudent() {
-  const URL = "https://assign-mentor-35.herokuapp.com";
+  
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -21,7 +22,7 @@ export default function AddStudent() {
   });
 
   const handleSubmit = async (values) => {
-    await axios.post(`${URL}/students`, values);
+    await axios.post(`${host}/students`, values);
     navigate("/");
   };
 

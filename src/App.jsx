@@ -1,12 +1,12 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import AddStudent from "./components/AddStudent";
-import AddMentor from "./components/AddMentor";
-import Home from "./components/Home";
-import Sidebar from "./components/Sidebar";
-import EditStudent from "./components/EditStudent";
-import EditMentor from "./components/EditMentor";
-import AssignStudents from "./components/AssignStudents";
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import AddStudent from './components/AddStudent';
+import AddMentor from './components/AddMentor';
+import Home from './components/Home';
+import Sidebar from './components/Sidebar';
+import EditStudent from './components/EditStudent';
+import EditMentor from './components/EditMentor';
+import AssignStudents from './components/AssignStudents';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Sidebar />
         <div className="container-fluid">
           <Routes>
-            <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/add-student" element={<AddStudent />} />
             <Route path="/add-mentor" element={<AddMentor />} />
