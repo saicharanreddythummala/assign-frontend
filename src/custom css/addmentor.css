@@ -1,0 +1,16 @@
+.mentor {
+    height: 100vh;
+}
+ 
+.mentor .card{
+    /* background-color: #e4e4f1; */
+    height: auto;
+    width: 55%;
+}
+
+Form{
+    height: 100%;
+    padding: 1em;
+    color: #11112c;
+    font-size: 1rem;
+}
