@@ -49,10 +49,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setLoading(true);
     studentData();
     mentorData();
-    setLoading(false);
   }, []);
 
   return (
