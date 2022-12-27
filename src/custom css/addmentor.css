@@ -14,3 +14,10 @@ Form{
     color: #11112c;
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .mentor .card{
+        width: 75% !important;
+    }
+}

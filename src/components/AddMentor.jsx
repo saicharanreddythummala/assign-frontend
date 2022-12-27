@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
-import "../custom css/addstudent.css";
+import "../custom css/addmentor.css";
 import axios from "axios";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ export default function AddStudent() {
     <>
       <div className="mentor container-fluid d-flex flex-column align-items-center justify-content-center">
         <h4>Add Mentor</h4>
-        <div className="card d-flex p-3 border w-50">
+        <div className="card d-flex p-3 border">
           <Form onSubmit={formik.handleSubmit}>
             <FormGroup row>
               <Label for="firstname" sm={3}>

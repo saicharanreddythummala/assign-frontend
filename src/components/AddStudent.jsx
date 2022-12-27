@@ -30,7 +30,7 @@ export default function AddStudent() {
     <>
       <div className="student container-fluid d-flex flex-column align-items-center justify-content-center">
         <h4>Add Student</h4>
-        <div className="card d-flex p-3 border w-50">
+        <div className="card d-flex p-3 border">
           <Form onSubmit={formik.handleSubmit}>
             <FormGroup row>
               <Label for="firstname" sm={3}>
@@ -74,7 +74,7 @@ export default function AddStudent() {
             </FormGroup>
             <FormGroup check row>
               <Col
-                sm={{
+                md={{
                   offset: 9,
                   size: 10,
                 }}

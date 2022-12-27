@@ -14,3 +14,10 @@ Form{
     color: #11112c;
     font-size: 1rem;
 }
+
+@media screen and (max-width: 1000px) {
+
+    .student .card{
+        width: 75% !important;
+    }
+}
