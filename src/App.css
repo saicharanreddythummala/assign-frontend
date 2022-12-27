@@ -8,8 +8,19 @@
   font-weight: 400;
 }
 
+#root{
+  display: flex;
+}
+
+@media screen and (max-width:919px) {
+  #root{
+    display: block;
+  }
+}
+
 .wrapper{
   display: flex;
+  flex-grow: 1;
 }
 
 .container-fluid{

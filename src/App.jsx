@@ -11,8 +11,8 @@ import AssignStudents from './components/AssignStudents';
 function App() {
   return (
     <>
-      <div className="wrapper">
         <Sidebar />
+      <div className="wrapper">
         <div className="container-fluid">
           <Routes>
             <Route path="/" element={<Home />} />
